@@ -1,0 +1,14 @@
+{
+  "python": {
+    "title": "what_i_do.py",
+    "description": "Hallo ! Ola ! Namaste! Hi! I am Aditya , I love building things, it gives me the ability of a wizard , but instead of a cool wand I have a keyboard(its keychrone K2). I have been programming since the age of 14,and still going on..."
+  },
+  "js": {
+    "title": "why_frontend.js",
+    "description":"Because I love make new designs, but also because I think we can make this web more interactive , more interesting , more liveable ... \uD83D\uDD77️"
+  },
+  "java": {
+    "title": "now_where.java",
+    "description":"To the infinity and beyond. Well, I want to learn machine learning in my university and also contribute in that field. Nevertheless, frontend web development will always be my love ❤️"
+  }
+}

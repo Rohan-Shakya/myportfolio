@@ -1,0 +1,24 @@
+@import "../../utils/colorPalette";
+
+
+.myskills__continer{
+  width: 100vw;
+  height: 100vh;
+
+  .mySwiper2{
+    .swiper-pagination{
+      bottom: 100px;
+      position: absolute;
+      display: block;
+    }
+    .swiper-button-prev{
+      left: 18%;
+      color: $orange;
+    }
+    .swiper-button-next{
+      right: 18%;
+      color: $orange;
+    }
+  }
+
+}

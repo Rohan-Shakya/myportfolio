@@ -1,0 +1,238 @@
+@import "../../utils/colorPalette";
+
+.about__container {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../../../assets/about_bg.svg") no-repeat bottom left;
+  transition: background 0.76s;
+  overflow: hidden;
+
+  .feature__card{
+    margin-right: 40px;
+  }
+
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 14vh;
+
+  }
+
+  .about-card__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    align-content: center;
+
+    .card__header-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $midnight-black;
+      padding: 3px 5px;
+      border-radius: 8px;
+      margin-top: -3px;
+      background: $white;
+      color: $black;
+
+      svg {
+        &:first-child {
+          margin-right: 40px;
+          margin-left: 10px;
+        }
+
+        margin-right: 10px;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .about-card__content {
+    color: $black;
+    position: relative;
+
+
+    .content-sec__left {
+      display: inline-flex;
+      flex-direction: row;
+      width: 5%;
+
+      svg {
+        margin: 20px 15px;
+      }
+
+      &::after {
+        content: "";
+        width: 1px;
+        height: 390px;
+        background: black;
+        display: block;
+      }
+    }
+
+    .content-sec__desc {
+      display: inline-flex;
+      width: 40%;
+      font-size: 1.4rem;
+      flex-direction: column;
+      padding: 10px 20px;
+
+      .link {
+        cursor: pointer;
+        width: 226px;
+        display: inline-flex;
+        position: absolute;
+        top: 85%;
+
+        .stats {
+          background-image: linear-gradient(to left, violet, indigo, blue, green, orange, red);
+          -webkit-background-clip: text;
+          color: transparent;
+          margin-left: 4px;
+        }
+
+        svg {
+          position: absolute;
+          right: -20px;
+          top: 8px;
+          width: 20px;
+          height: 20px;
+        }
+
+        &:hover {
+          border-bottom: 2px solid $midnight-black;
+        }
+
+      }
+
+    }
+
+    .content-sec__files {
+      display: inline-flex;
+      width: 55%;
+      padding: 0 10px;
+      position: relative;
+
+      .card {
+        position: absolute;
+        width: 90%;
+        display: flex;
+
+      }
+    }
+  }
+
+}
+
+//dark mode
+.dark {
+  .about__container {
+    transition: background 0.1s;
+
+    h1 {
+      color: $pale-grey;
+    }
+
+    svg {
+      fill: $white;
+      stroke: $white;
+    }
+
+    .card__header-bar {
+      background: $midnight-black;
+      border: 1px solid $pale-grey;
+      color: $white;
+
+      svg {
+        fill: $white;
+        stroke: none;
+      }
+    }
+
+    .card__header-add {
+      svg {
+        path {
+          fill: $white;
+          stroke: $white;
+          stroke-width: 1px;
+        }
+      }
+    }
+
+    .content-sec__desc {
+      h3 {
+        color: $grey;
+      }
+    }
+
+
+    .about-card__content {
+      color: $pale-grey;
+
+      svg {
+        stroke: none;
+      }
+
+      .content-sec__left {
+        &::after {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      .content-sec__desc {
+        h3 {
+          padding-bottom: 15px;
+        }
+
+        .link {
+          &:hover {
+            border-bottom: 2px solid $pale-grey;
+          }
+
+          .stats {
+            background-image: linear-gradient(to left, $sun-yellow, $light-blue, green, orange, red);
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+@media screen and (max-width: 992px) {
+  .about__container {
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0;
+  }
+  .content-sec__left {
+    display: none;
+
+    &::after {
+      display: none !important;
+    }
+  }
+
+  .about-card__header{
+    padding: 10px 0!important;
+    .back__front-icons{
+      display: flex;
+      svg{
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+}
+
+
+
+
+

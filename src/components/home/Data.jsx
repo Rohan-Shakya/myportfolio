@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Data(props) {
+function Data() {
     return (<div className="home__data">
         <h1 className="home__title">Aditya Tiwari
             <svg
@@ -63,8 +63,8 @@ function Data(props) {
             <span>- Studying @ 🎓 TUM(Technical University of Munich)</span>
             <span>- Working @ 👨‍💻 Morgenland (temporary)</span>
         </p>
-        <a href="#contact" className="button button-flex">
-            Say Hello
+        <a href={"#contact"} className="button button-flex contact-me__button">
+            Say<span> Hello</span>
             <svg
                 className="button__icon"
                 xmlns="http://www.w3.org/2000/svg"

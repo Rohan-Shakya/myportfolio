@@ -1,0 +1,43 @@
+@import "../../utils/colorPalette";
+
+
+.feature__card{
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.5);
+  color: $white;
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: -5px;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid $midnight-black;
+  text-align: left;
+
+  hr{
+    height: 1px;
+    background-color: $midnight-black;
+    border: none;
+  }
+}
+
+
+//darkmode
+.dark{
+.feature__card{
+ background: rgba(34,34,34,0.5);
+  border: 1px solid rgba(255,255,255,0.5);
+   hr{
+     background: rgba(255,255,255,0.5);
+   }
+}
+}
+
+@media screen and (max-width: 992px) {
+.feature__card{
+  width: 90%;
+  padding: 3px 15px;
+  margin:3px 15px;
+}
+
+}

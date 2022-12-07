@@ -1,0 +1,40 @@
+@import "../../utils/colorPalette";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.31);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.9px);
+  -webkit-backdrop-filter: blur(8.9px);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: $white;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  transition: background 1.2s, border 1.2s;
+  align-items: center;
+  align-content: center;
+
+  hr {
+    height: 1px;
+    background-color: $midnight-black;
+    border: none;
+  }
+}
+
+
+//darkmode
+.dark {
+  .card {
+    background: rgba(34, 34, 34, 0.74);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: background 0s, border 0s;
+    color: $white;
+
+    hr {
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
