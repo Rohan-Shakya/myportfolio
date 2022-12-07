@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://Aditya-Raj-Tiwari.github.io/portfolio",
+  "homepage": "https://Aditya-Raj-Tiwari.github.io/myportfolio",
   "private": true,
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.31",
@@ -24,6 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
