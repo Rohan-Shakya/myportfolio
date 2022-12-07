@@ -11,8 +11,8 @@
 ---
 
 # some this is my website :
-- http://morgenland-teppiche.de
-- https://aditya-raj-tiwari.github.io/restaurant-app/
+- https://aditya-raj-tiwari.github.io/myportfolio/
+
 
 ---
 
