@@ -1,11 +1,18 @@
-import {memo} from 'react';
+import React, {Dispatch, memo, SetStateAction} from 'react';
 import Card from "./Card";
 import "../stylesheets/components/UI/CodeSec.scss"
 import {TypeAnimation} from 'react-type-animation';
+import AboutMePage from "../../data/about_me"
 
 
-function CodeSec({my_data, active, setActive}) {
-    const code = (arg) => {
+type Props = {
+    my_data: AboutMePage
+    active: string
+    setActive: Dispatch<SetStateAction<'python' | 'js' | 'java'>>
+}
+
+export const CodeSec = ({my_data, active, setActive}: Props) => {
+    const code = (arg: string) => {
         switch (arg) {
             case "python":
                 return <>
@@ -16,7 +23,7 @@ function CodeSec({my_data, active, setActive}) {
             case "js":
                 return <>
                     <p>const bestFrameWork = "React";</p>
-                    <p>if(bestbestFrameWork != "React")</p>
+                    <p>if(bestFrameWork != "React")</p>
                     <p>console.log("mate you are joking right?");</p>
                 </>
             default:

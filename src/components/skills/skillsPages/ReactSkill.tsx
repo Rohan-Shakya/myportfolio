@@ -4,8 +4,7 @@ import {ReactJs} from "@icons-pack/react-simple-icons"
 import Card from "../../UI/Card";
 
 function ReactSkill() {
-    return (
-        <div className={"react__skill-container"}>
+    return (<div className={"react__skill-container"}>
             <h1>React.js <ReactJs color='#61DAFB' size={44}/></h1>
             <div className="row">
                 <Card>
@@ -27,7 +26,8 @@ function ReactSkill() {
                         <div className={"reviews"}>
                             <p><span className={"bold"}>4.9</span> out of <span className={"bold"}>5</span></p>
                             <p>Service Rating in Linked in!</p>
-                            <a href="https://www.linkedin.com/services/page/14028730a0545635b6" target="_blank" rel="noopener noreferrer">Link to Linked-in
+                            <a href="https://www.linkedin.com/services/page/14028730a0545635b6" target="_blank"
+                               rel="noopener noreferrer">Link to Linked-in
                                 Service</a>
                         </div>
                     </Card>
@@ -42,8 +42,7 @@ function ReactSkill() {
                 </div>
             </div>
 
-        </div>
-    );
+        </div>);
 }
 
 export default ReactSkill;

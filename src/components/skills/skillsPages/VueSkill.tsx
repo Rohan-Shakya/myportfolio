@@ -1,8 +1,9 @@
-import {React, useState} from 'react';
+import React,{useState} from 'react';
 import {Vuedotjs} from "@icons-pack/react-simple-icons";
 import Card from "../../UI/Card";
 import "../../stylesheets/components/skills/SkillsPages/VueSkills.scss"
-import myWorkImage from "../../../assets/work.webp"
+
+const myWorkImage = require("../../../assets/work.webp")
 
 function VueSkill() {
     const [popPic, setPopPic] = useState("");
@@ -22,7 +23,7 @@ function VueSkill() {
                         <p>In my work I have implemented several concepts like Filters, Basket, Sliders, Category Pages
                             with Items, Product Pages, etc</p>
                         <br/>
-                        <p>You can see my work in the website -> <a onMouseEnter={() => setPopPic("show")}
+                        <p>You can see my work in the website -{'>'} <a onMouseEnter={() => setPopPic("show")}
                                                                     onMouseLeave={() => setPopPic("")}
                                                                     href="https://www.morgenland-teppiche.de" rel="my Work noreferrer" target="_blank">Ecommerce Website
                             Link</a></p>

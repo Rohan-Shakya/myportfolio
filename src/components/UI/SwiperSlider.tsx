@@ -10,7 +10,11 @@ import "swiper/css/pagination";
 // import required modules
 import {Mousewheel, Pagination} from "swiper";
 
-const SwiperSlider = (props) => {
+type Props = {
+    children : React.ReactNode
+}
+
+const SwiperSlider = ({children}:Props) => {
 
     return (
         <>
@@ -28,7 +32,7 @@ const SwiperSlider = (props) => {
                 className="mySwiper"
             >
                 <SwiperSlider>
-                    {props.children}
+                    {children}
                 </SwiperSlider>
             </Swiper>
         </>

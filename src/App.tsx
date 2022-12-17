@@ -17,13 +17,10 @@ function App() {
             <Header/>
             <main className="main">
                 <SwiperSlider>
-                    {/*<SwiperSlide><OverallSkill/></SwiperSlide>*/}
                     <SwiperSlide> <Home/></SwiperSlide>
                     <SwiperSlide> <AboutMe/></SwiperSlide>
                     <SwiperSlide> <MySkills /></SwiperSlide>
                 </SwiperSlider>
-                {/*<SwiperSlide>Slide 3</SwiperSlide>*/}
-                {/*<SwiperSlide>Slide 4</SwiperSlide>*/}
             </main>
         </>
     );

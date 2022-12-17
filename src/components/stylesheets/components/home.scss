@@ -1,12 +1,14 @@
 @import "../utils/colorPalette";
 
-.home__container{
+.home__container {
   height: 100vh;
   width: 100vw;
 }
-.home.section{
+
+.home.section {
   width: 100%;
-  .home__data{
+
+  .home__data {
     text-align: left;
   }
 }
@@ -159,14 +161,16 @@
 
 
 .home__img {
-  background: url(../../../assets/my_prof.webp) no-repeat center;
+  background: url(../../../assets/my_prof.png) no-repeat center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
-  box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+  width: 400px;
+  height: 400px;
+  box-shadow: inset 0 0 0 9px rgb(216 146 23 / 30%);
   order: 1;
   justify-self: center;
-  animation: profile__animate 8s ease-in-out infinite 1s;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: profile__animate 6s ease-in-out infinite 1s;
+
 }
 
 
@@ -222,15 +226,15 @@
   }
 
   30% {
-    transform: rotate(25deg) translate(20px, -20px);
+    transform: rotate(25deg) translate(20px, -10px);
   }
 
   55% {
-    transform: rotate(25deg) translate(20px, -20px);
+    transform: rotate(25deg) translate(20px, -10px);
   }
 
   75% {
-    transform: rotate(25deg) translate(20px, -20px);
+    transform: rotate(25deg) translate(20px, -10px);
   }
 
   85% {
@@ -259,16 +263,36 @@
 }
 
 @media screen and (max-width: 968px) {
-  .home__content{
-    grid-template-columns: repeat(1,1fr);
+  .home__container {
+    padding: 40px 5px;
+    width: calc(100vw - 5px);
+
+
+    .home__content {
+      width: calc(100% - 20px);
+      grid-template-columns: none;
+
+      .home__data {
+        width: 100%;
+
+        .home__description {
+          max-width: 100%;
+        }
+      }
+
+    }
+
+
+    .home__img, .home__social {
+      display: none;
+    }
   }
-  .home__social{
-    display: none;
-  }
+
+
   //dark mode 968px
-  .dark{
-    .home__content{
-      .home__subtitle, .home__description{
+  .dark {
+    .home__content {
+      .home__subtitle, .home__description {
         color: $white;
       }
     }

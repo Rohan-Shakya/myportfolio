@@ -1,6 +1,6 @@
 import React from 'react';
 import "../stylesheets/components/skills/mySkills.scss"
-import {SwiperSlide,Swiper} from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import {Mousewheel, Navigation, Pagination} from "swiper";
 import "swiper/css/navigation";
 import ReactSkill from "./skillsPages/ReactSkill";
@@ -22,14 +22,14 @@ function MySkills() {
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Mousewheel, Pagination,Navigation]}
+                    modules={[Mousewheel, Pagination, Navigation]}
                 >
                     <SwiperSlide>
-                        <ReactSkill />
+                        <ReactSkill/>
                     </SwiperSlide>
                     <SwiperSlide><VueSkill/></SwiperSlide>
                     <SwiperSlide>
-                        <ScrumSkill />
+                        <ScrumSkill/>
                     </SwiperSlide>
                 </Swiper>
             </SwiperSlide>

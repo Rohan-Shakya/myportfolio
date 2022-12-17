@@ -3,10 +3,13 @@ import "../stylesheets/components/aboutme/aboutme.scss"
 import CardLarge from "../UI/CardLarge";
 import CodeSec from "../UI/CodeSec";
 import my_data from "../../data/about_me.json"
+import AboutMePage from "../../data/about_me"
 
 
-function AboutMe() {
-    const [active, setActive] = useState("python");
+const my_datas: AboutMePage = my_data.aboutMePage;
+
+export const AboutMe: React.FC = () => {
+    const [active, setActive] = useState<'python' | 'js' | 'java'>("python");
 
     return (
         <div id="about" className="about__container">
@@ -70,9 +73,9 @@ function AboutMe() {
                     {/*dynamic description goes here*/}
                     <div className={"content-sec__desc"}>
                         <h3>
-                            > {my_data[active].title}
+                            {my_datas[active as keyof AboutMePage].title}
                         </h3>
-                        {my_data[active].description}
+                        {my_datas[active as keyof AboutMePage].description}
 
                         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                         <a className={"link"}>See my Github <span className={"stats"}>Stats</span>
@@ -88,7 +91,7 @@ function AboutMe() {
                     </div>
                     {/*end dynamic description*/}
                     <div className={"content-sec__files"}>
-                        <CodeSec my_data={my_data} active={active} setActive={setActive}/>
+                        <CodeSec my_data={my_datas} active={active} setActive={setActive}/>
                     </div>
                 </div>
 
