@@ -26,16 +26,59 @@
     font-weight: 600;
 
     svg {
-      path {
-        fill: $black;
+      display: none;
+    }
+
+    &[data-isOpen="true"] {
+      width: 500px;
+      height: 400px;
+      background: $orange;
+      border: none;
+
+      svg {
+        display: block;
+        position: absolute;
+        right: 30px;
+        width: 24px;
+        height: 24px;
+        top: 25px;
+      }
+
+      .hellow_text {
+        text-decoration: underline;
+        font-size: 1.4rem;
+        width: 100%;
+      }
+
+      .child {
+        display: block;
+        position: relative;
+        z-index: 9;
+
+        h3 {
+          &:first-child {
+            margin-top: 10px;
+          }
+
+          margin-bottom: 30px;
+        }
       }
     }
 
-    &:hover {
-      svg {
-        animation: send-button__animate 3s ease-in-out 0.16s;
-      }
+    .child {
+      display: none;
+    }
 
+    .hellow_text {
+      display: inline-flex;
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      align-items: center;
+      padding-right: 10px;
+    }
+
+    &:hover {
       animation: width-animate 3s ease-out;
       animation-iteration-count: 1;
 
@@ -45,7 +88,6 @@
       }
     }
   }
-
 }
 
 .home__social {
@@ -98,7 +140,6 @@
       padding-bottom: 0;
     }
   }
-
 }
 
 .home__subtitle {
@@ -111,7 +152,7 @@
   padding-left: 5.4rem;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 70px;
     height: 1px;
@@ -119,46 +160,55 @@
     left: 0;
     top: 1rem;
   }
-
 }
 
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
+
   10% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
+
   /* The following five values can be played with to make the waving more or less extreme */
   20% {
-    transform: rotate(-8.0deg)
+    transform: rotate(-8deg);
   }
+
   30% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
+
   40% {
-    transform: rotate(-4.0deg)
+    transform: rotate(-4deg);
   }
+
   50% {
-    transform: rotate(10.0deg)
+    transform: rotate(10deg);
   }
+
   60% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
+
   /* Reset for the last half to pause */
   100% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
 }
-
 
 .home__img {
   background: url(../../../assets/my_prof.png) no-repeat center;
@@ -170,15 +220,18 @@
   justify-self: center;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   animation: profile__animate 6s ease-in-out infinite 1s;
+  cursor: pointer;
 
+  &:hover {
+    background: url(../../../assets/change_pic_profile.png) no-repeat center;
+  }
 }
-
 
 //darkmode
 .dark {
-
   .home__container {
-    .home__title, .home__social-icon {
+    .home__title,
+    .home__social-icon {
       color: $pale-grey;
     }
 
@@ -199,11 +252,9 @@
           }
         }
       }
-
     }
   }
 }
-
 
 @keyframes profile__animate {
   0% {
@@ -218,7 +269,6 @@
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }
-
 
 @keyframes send-button__animate {
   0% {
@@ -240,6 +290,7 @@
   85% {
     transform: rotate(25deg) translate(20px, -20px);
   }
+
   90% {
     transform: rotate(25deg) translate(30px, -20px);
     fill: #02e1ba;
@@ -249,12 +300,10 @@
 
 @keyframes width-animate {
   70% {
-    background: $sun-yellow;
-    border-color: $sun-yellow;
+    background: $orange;
+    border-color: $orange;
   }
-
 }
-
 
 @keyframes span-animate {
   70% {
@@ -267,7 +316,6 @@
     padding: 40px 5px;
     width: calc(100vw - 5px);
 
-
     .home__content {
       width: calc(100% - 20px);
       grid-template-columns: none;
@@ -279,24 +327,21 @@
           max-width: 100%;
         }
       }
-
     }
 
-
-    .home__img, .home__social {
+    .home__img,
+    .home__social {
       display: none;
     }
   }
 
-
   //dark mode 968px
   .dark {
     .home__content {
-      .home__subtitle, .home__description {
+      .home__subtitle,
+      .home__description {
         color: $white;
       }
     }
   }
-
-
 }

@@ -2,7 +2,7 @@ import React, {Dispatch, memo, SetStateAction} from 'react';
 import Card from "./Card";
 import "../stylesheets/components/UI/CodeSec.scss"
 import {TypeAnimation} from 'react-type-animation';
-import AboutMePage from "../../data/about_me"
+import AboutMePage from "../../data/about_me.types"
 
 
 type Props = {

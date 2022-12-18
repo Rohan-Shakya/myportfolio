@@ -3,7 +3,7 @@ import "../stylesheets/components/aboutme/aboutme.scss"
 import CardLarge from "../UI/CardLarge";
 import CodeSec from "../UI/CodeSec";
 import my_data from "../../data/about_me.json"
-import AboutMePage from "../../data/about_me"
+import AboutMePage from "../../data/about_me.types"
 
 
 const my_datas: AboutMePage = my_data.aboutMePage;

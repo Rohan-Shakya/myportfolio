@@ -6,7 +6,7 @@ import "../../stylesheets/components/skills/SkillsPages/VueSkills.scss"
 const myWorkImage = require("../../../assets/work.webp")
 
 function VueSkill() {
-    const [popPic, setPopPic] = useState("");
+    const [popPic, setPopPic] = useState<string>("");
 
     return (
         <div className={"vue__skill-container"}>

@@ -19,9 +19,4 @@ export default interface AboutMePage {
     java: Java;
 }
 
-export interface RootObject {
-    aboutMePage: AboutMePage;
-}
-
-
 
