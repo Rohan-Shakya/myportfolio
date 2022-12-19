@@ -25,7 +25,8 @@
   &.top__left {
     left: -5%;
     top: 20%;
-    z-index: 2;
+    z-index: 3;
+    object-position: center left;
   }
   &.center{
     width: 400px;
@@ -34,12 +35,12 @@
     padding-top: 5vh;
     padding-left: 2.3vw;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
   }
   &.top__right{
     right: -2%;
     top: 20%;
-    z-index: 2;
+    z-index: 1;
   }
 
 }
@@ -52,7 +53,7 @@
     transform: scale(1.17, 1.2);
   }
   70% {
-    transform: scale(1.25, 1.2);
+    transform: scale(1.35, 1.3);
   }
   100% {
     transform: scale(1, 1);

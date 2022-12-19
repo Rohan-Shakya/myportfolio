@@ -7,7 +7,6 @@ function Data() {
         open: { y: -150},
         closed: { y: 0 }
     }
-    const [active, setActive] = useState<'python' | 'js' | 'java'>("python");
 
 
     return (<div className="home__data">
@@ -66,29 +65,29 @@ function Data() {
             Frontend Developer
         </h3>
         <p className="home__description">
-            I will take your e-commerce website to a more user-friendly, more accessible, and more qualitative level
-            through my experience and knowledge in the e-commerce sector and frontend technologies (vue.js, next.js,
-            react, etc). I also have 2 years of experience with plentymarkets.
-            <span>- Studying @ 🎓 TUM(Technical University of Munich)</span>
-            <span>- Working @ 👨‍💻 Morgenland (temporary)</span>
+            Hi ! I am Aditya. I'm a front-end developer based in Munich,Germany.
+            <span>I'm passionate about cutting-edge, pixel-perfect, beautiful interfaces and intuitively implemented UI.</span>
         </p>
         <motion.a data-isOpen={isOpen} layout
             initial={{ borderRadius: 50 }} href={"#contact"}
             animate={isOpen ? variants.open : variants.closed}
             className="button button-flex contact-me__button">
-            <span 
+            <span
             onClick={() => setIsOpen(!isOpen)}
             className="hellow_text">Say Hello</span>
-            <motion.svg onClick={() => setIsOpen(false)} whileHover={{rotate: 97}} xmlns="http://www.w3.org/2000/svg" width="47" height="47" 
-            viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round" 
+            <motion.svg onClick={() => setIsOpen(false)} whileHover={{rotate: 97}} xmlns="http://www.w3.org/2000/svg" width="47" height="47"
+            viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2" strokeLinecap="round"
             strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></motion.svg>
 
             <motion.div layout className="child">
-                <motion.h3 onClick={() => console.log("clicked")} whileHover={{ scale: 1.2, x: 30 }}>Grab a coffee togeather ☕️</motion.h3>
-                <motion.h3 whileHover={{ scale: 1.2, x: 30 }}>Hire me!</motion.h3>
-                <motion.h3 whileHover={{ scale: 1.2, x: 30 }}>Just wanted to say hellow!</motion.h3>
+                <motion.h3 onClick={() => console.log("clicked")} whileHover={{ scale: 1.1 }}
+                           transition={{ type: "spring", stiffness: 400, damping: 10 }}>Grab a coffee togeather ☕️</motion.h3>
+                <motion.h3 whileHover={{ scale: 1.2 }}
+                           transition={{ type: "spring", stiffness: 400, damping: 10 }}>Hire me!</motion.h3>
+                <motion.h3 whileHover={{ scale: 1.1 }}
+                           transition={{ type: "spring", stiffness: 400, damping: 10 }}>Just wanted to say hellow!</motion.h3>
             </motion.div>
-    
+
         </motion.a>
 
     </div>);

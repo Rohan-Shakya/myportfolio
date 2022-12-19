@@ -4,6 +4,7 @@ import "../stylesheets/components/portfolio/portfolio.scss"
 import BubbleAnimation from "../UI/BubbleAnimation";
 
 const Morgenland_PIC = require("../../assets/morgenland_ref.png")
+const TUM_PIC = require("../../assets/tum_bubble.webp")
 
 const Education = () => {
     const [showBubbleTum, setShowBubbleTum] = useState<boolean>(false);
@@ -87,9 +88,11 @@ const Education = () => {
                 </>}
             </motion.h3>
             <BubbleAnimation
-                imageUrl="https://www.tum.de/fileadmin/_processed_/7/c/csm_20220209_Neubau_EI_AH_672635_aa584b6500.webp"
+                imageUrl={TUM_PIC}
                 show={showBubbleTum} className={'top__left'}/>
             <BubbleAnimation show={showBubbleTum} className={'center'}>
+            </BubbleAnimation>
+            <BubbleAnimation  imageUrl="https://mediatum.ub.tum.de/image/1692322.jpg" show={showBubbleTum} className={'top__right'}>
             </BubbleAnimation>
 
             <BubbleAnimation show={showBubbleUdemy} className={'center'}>

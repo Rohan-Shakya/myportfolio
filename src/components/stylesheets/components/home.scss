@@ -34,6 +34,7 @@
       height: 400px;
       background: $orange;
       border: none;
+      padding-top: 30px;
 
       svg {
         display: block;
@@ -42,25 +43,35 @@
         width: 24px;
         height: 24px;
         top: 25px;
+        z-index: 99;
       }
 
       .hellow_text {
-        text-decoration: underline;
-        font-size: 1.4rem;
-        width: 100%;
+        display: none;
       }
 
       .child {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         position: relative;
         z-index: 9;
 
         h3 {
           &:first-child {
             margin-top: 10px;
+            width: 100%;
           }
 
-          margin-bottom: 30px;
+          margin-bottom: 20px;
+          border-radius: 10px;
+          background: $pale-grey;
+          width: 47%;
+          height: 150px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding:20px;
         }
       }
     }
