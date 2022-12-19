@@ -70,7 +70,7 @@ const Education = () => {
             <motion.h3 onHoverStart={() => setshowBubbleUdemy(true)} onHoverEnd={() => setshowBubbleUdemy(false)}
                        whileHover={{scale: 1.2}} whileTap={{scale: 0.8}} className="child"
                        variants={childrenVariantFlyRight}>
-                💼 Word Experience:
+                💼 Work Experience:
                 <h6>Morgenland Teppiche</h6>
                 <p>2 years of working Experience</p>
                 {showBubbleUdemy && <>
