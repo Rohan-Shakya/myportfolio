@@ -8,22 +8,22 @@ import AboutMe from "./components/about/AboutMe";
 import SwiperSlider from "./components/UI/SwiperSlider";
 import {SwiperSlide} from "swiper/react";
 import MySkills from "./components/skills/MySkills";
+import Portfolio from "./components/portfolio/Portfolio";
 
 function App() {
     const ctx = useContext(ThemeContext);
-    return (
-        <>
+    return (<>
             <GrowingCircleAnimation isDark={ctx.isDark}/>
             <Header/>
             <main className="main">
                 <SwiperSlider>
                     <SwiperSlide> <Home/></SwiperSlide>
                     <SwiperSlide> <AboutMe/></SwiperSlide>
-                    <SwiperSlide> <MySkills /></SwiperSlide>
+                    <SwiperSlide> <MySkills/></SwiperSlide>
+                    <SwiperSlide> <Portfolio/></SwiperSlide>
                 </SwiperSlider>
             </main>
-        </>
-    );
+        </>);
 }
 
 export default App;

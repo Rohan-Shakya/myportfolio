@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;1,400&family=Shadows+Into+Light&family=Varela+Round&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
     --header-height: 3rem;

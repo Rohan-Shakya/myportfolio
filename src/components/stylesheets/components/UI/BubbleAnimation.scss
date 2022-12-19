@@ -1,0 +1,60 @@
+@import "../../utils/colorPalette";
+
+.bubble-animation {
+  width: 230px;
+  height: 230px;
+  border-radius: 100%;
+  position: absolute;
+  font-size: 0.5rem;
+  display: block;
+  color: $pale-grey;
+  overflow: hidden;
+  background: rgba(198, 35, 104, 0.55);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2.5px );
+  -webkit-backdrop-filter: blur( 2.5px );
+  border: 1px solid rgba(198, 35, 104, 0.18);
+
+  img {
+    animation: scaleOut 30s ease-in infinite;
+  }
+  p{
+    padding-bottom: 10px;
+  }
+
+  &.top__left {
+    left: -5%;
+    top: 20%;
+    z-index: 2;
+  }
+  &.center{
+    width: 400px;
+    height: 400px;
+    bottom: 5%;
+    padding-top: 5vh;
+    padding-left: 2.3vw;
+    text-align: center;
+    z-index: 1;
+  }
+  &.top__right{
+    right: -2%;
+    top: 20%;
+    z-index: 2;
+  }
+
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.17, 1.2);
+  }
+  70% {
+    transform: scale(1.25, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

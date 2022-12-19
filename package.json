@@ -24,6 +24,7 @@
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false && react-scripts start",
     "build": "react-scripts build",
+    "startlocal": "HOST=0.0.0.0 react-scripts start",
     "test": "react-scripts test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
